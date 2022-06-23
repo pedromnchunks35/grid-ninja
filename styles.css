@@ -1,0 +1,112 @@
+/* BODY PROPERTIES */
+body{
+color: #fff;
+font-family:Arial, Helvetica, sans-serif;
+text-align: center;    
+}
+
+/* MAIN DIV */
+#content{
+    max-width: 960px;
+    margin: 0 auto;
+    /* DISPLAY AS GRID */
+    display: grid;
+    /* ESTABILSH THE COLUMNS: SAYING THAT WE HAVE 3 COLUMNS , WHICH WILL HAVE THAT PERCENTAGE OF REPRESENTATION */
+    /* grid-template-columns: 30% 20% 50%; */
+
+    /* ESTABLISH COLUMNS WITH FRACTIONS */
+    /* grid-template-columns: 1fr 1fr 1fr;
+ */
+    /* ESTABLISH COLUMNS WITH REPEAT (WE WANT 3 COLUMNS OF 1 FR) */
+    grid-template-columns: repeat(9,1fr);
+
+    /* ESTABLISH ROWS HEIGHT */
+    /* grid-auto-rows: 30%; */
+    /* ESTABLISH ROWS HEIGHT WITH CONDITIONS */
+    /* grid-auto-rows: minmax(30%,auto); */
+
+    /* ESTABLISH NUMBER OF ROWS */
+    /* grid-template-rows: 1fr 1fr 1fr; */
+
+    /* ESTABLISH NUMBER OF ROWS WITH REPEAT */
+    grid-template-rows: repeat(4,minmax(150px,auto));
+    
+    /* PUT AN GAP BEETWEEN DIVS */
+    grid-gap: 1rem;
+    /* ALIGN THE DIVS TO THE START OR END OR SCRETCH */
+    /* align-items: start; */
+}
+/* ONLY THE DIV MAIN DIV */
+#content div{
+    background: #3bbced;
+    padding: 30px;
+}
+/* CHILDS OF THE MAIN DIV WHICH REPRESENT EVEN POSITIONS LIKE 2 4 6 ETC... */
+#content div:nth-child(even){
+    background: #777;
+}
+/* DIVS BY NUMBER */
+
+.one{
+/* POSITION IN GRID */
+/* grid-column-start: 1;    
+grid-column-end: 3; */
+
+/* SAME THING BUT LESS CODE */
+grid-column: 1/3;
+/* WITH THIS WE CAN JUSTIFY THE DIV TO AN CERTAIN POSITION OF THE GRID ITSELF POSITION */
+/* justify-self: end; */
+}
+
+.two{
+/* POSITION IN GRID */
+grid-column: 3/6;
+}
+
+.three{
+    /* POSITION IN GRID */
+    grid-column: 1/4;
+    /* SAME THING FOR ROWS */
+    grid-row: 2/4;
+}
+
+.four{
+    grid-column: 4/9;
+    grid-row: 2/4;
+}
+
+.five{
+grid-column: 1/4;
+grid-row: 4/5;
+}
+
+.six{
+    grid-column: 4/9;
+    grid-row: 4/5;
+}
+
+.seven{
+    grid-column: 1/4;
+    grid-row: 5/6;
+}
+
+.eight{
+    grid-column: 4/9;
+    grid-row: 5/6;
+}
+
+.nine{
+    grid-column: 1/9;
+}
+#content{
+    /* ROTATE */
+    transform: rotateZ(45deg)scale(0.7);
+}
+.big{
+    width: 100%;
+    height: 100%;
+}
+
+.big:hover{
+    background: #3bbced;
+}
